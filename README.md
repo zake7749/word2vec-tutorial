@@ -13,7 +13,7 @@ pip3 install jieba
 pip3 install -U gensim
 ```
 
-### 訓練流程
+## 訓練流程
 
 1.取得[中文維基數據](https://dumps.wikimedia.org/zhwiki/20160820/zhwiki-20160820-pages-articles-multistream.xml.bz2)
 2.使用`wiki_to_txt.py`從xml格式裡提取出文章
