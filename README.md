@@ -20,7 +20,7 @@ pip3 install -U gensim
 2.使用`wiki_to_txt.py`從xml格式裡提取出維基文章
 
 ```
-python3 wiki_to_txt.py zhwiki-20160820-pages-articles-multistream.xml.bz2
+python3 wiki_to_txt.py zhwiki-20160820-pages-articles.xml.bz2
 ```
 3.使用 opencc 統一將維基文章轉換為繁體中文
 ```
