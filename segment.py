@@ -9,11 +9,14 @@ def main():
 
     # jieba custom setting.
     jieba.set_dictionary('jieba_dict/dict.txt.big')
-
     # load stopwords set
-    stopwords =open('jieba_dict/stopwords.txt','r').read()
-    stopwordset = set(stopwords)
-    texts_num = 0
+    stopwordset = set()
+    with open('jieba_dict/stopwords.txt','r',encoding='utf-8') as sw:
+        for line in sw:
+            stopwordset.add(line.strip('\n'))
+
+    for word in stopwordset:
+        print(word)
 
     output = open('wiki_seg.txt','w')
     with open('wiki_zh_tw.txt','r') as content :
