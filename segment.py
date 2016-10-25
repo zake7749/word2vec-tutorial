@@ -29,7 +29,7 @@ def main():
 
             texts_num += 1
             if texts_num % 10000 == 0:
-                logging.info("已處理 %d 個 token" % texts_num)
+                logging.info("已完成前 %d 行的斷詞" % texts_num)
     output.close()
 
 if __name__ == '__main__':
