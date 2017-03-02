@@ -25,6 +25,7 @@ pip3 install -U gensim
 ```
 python3 wiki_to_txt.py zhwiki-20160820-pages-articles.xml.bz2
 ```
+*若您採用的不是 8 月 20 號的備份，請更換 `zhwiki-20160820-pages-articles.xml.bz2` 為您採用的備份的檔名。*
 
 3.使用 OpenCC 將維基文章統一轉換為繁體中文
 ```
