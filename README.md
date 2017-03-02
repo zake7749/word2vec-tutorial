@@ -16,9 +16,9 @@ pip3 install -U gensim
 
 ## 訓練流程
 
-1.取得[中文維基數據](https://dumps.wikimedia.org/zhwiki/20160820/zhwiki-20160820-pages-articles.xml.bz2)，本次實驗是採用 2016/8/20 的資料，若需要更新的數據，可以前往[維基百科:資料庫下載](https://zh.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD)下載 ( 請挑選以`pages-articles.xml.bz2`為結尾的檔案 )
+1.取得[中文維基數據](https://dumps.wikimedia.org/zhwiki/20160820/zhwiki-20160820-pages-articles.xml.bz2)，本次實驗是採用 2016/8/20 的資料。
 
-**註：目前 8 月 20 號的備份已經被淘汰掉囉，請前往[這邊](https://dumps.wikimedia.org/zhwiki/)按日期來挑選需要的訓練資料。**
+**目前 8 月 20 號的備份已經被淘汰掉囉，請前往[維基百科:資料庫下載](https://zh.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD)按日期來挑選需要的訓練資料。( 請挑選以`pages-articles.xml.bz2`為結尾的檔案 )*
 
 2.將下載後的維基數據置於與專案同個目錄，再使用`wiki_to_txt.py`從 xml 中提取出維基文章
 
