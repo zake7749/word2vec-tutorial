@@ -10,10 +10,10 @@ def main():
     model = word2vec.Word2Vec(sentences, size=250)
 
     #保存模型，供日後使用
-    model.save_word2vec_format(u"med250.model.bin", binary=True)
+    model.save(u"med250.model.bin")
 
     #模型讀取方式
-    # model = word2vec.Word2Vec.load_word2vec_format("your_model.bin", binary=True)
+    # model = word2vec.Word2Vec.load("your_model.bin")
 
 if __name__ == "__main__":
     main()
