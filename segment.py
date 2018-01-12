@@ -11,25 +11,23 @@ def main():
     jieba.set_dictionary('jieba_dict/dict.txt.big')
 
     # load stopwords set
-    stopwordset = set()
-    with open('jieba_dict/stopwords.txt','r',encoding='utf-8') as sw:
-        for line in sw:
-            stopwordset.add(line.strip('\n'))
+    stopword_set = set()
+    with open('jieba_dict/stopwords.txt','r', encoding='utf-8') as stopwords:
+        for stopword in stopwords:
+            stopword_set.add(stopword.strip('\n'))
 
-    texts_num = 0
-
-    output = open('wiki_seg.txt','w')
-    with open('wiki_zh_tw.txt','r') as content :
-        for line in content:
+    output = open('wiki_seg.txt', 'w', encoding='utf-8')
+    with open('wiki_zh_tw.txt', 'r', encoding='utf-8') as content :
+        for texts_num, line in enumerate(content):
             line = line.strip('\n')
             words = jieba.cut(line, cut_all=False)
             for word in words:
-                if word not in stopwordset:
-                    output.write(word +' ')
+                if word not in stopword_set:
+                    output.write(word + ' ')
+            output.write('\n')
 
-            texts_num += 1
-            if texts_num % 10000 == 0:
-                logging.info("已完成前 %d 行的斷詞" % texts_num)
+            if (texts_num + 1) % 10000 == 0:
+                logging.info("已完成前 %d 行的斷詞" % (texts_num + 1))
     output.close()
 
 if __name__ == '__main__':

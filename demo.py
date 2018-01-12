@@ -6,7 +6,7 @@ import logging
 
 def main():
 	logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-	model = models.Word2Vec.load('med250.model.bin')
+	model = models.Word2Vec.load('word2vec.model')
 
 	print("提供 3 種測試模式\n")
 	print("輸入一個詞，則去尋找前一百個該詞的相似詞")
