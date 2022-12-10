@@ -20,17 +20,17 @@ def main():
 
 			if len(q_list) == 1:
 				print("相似詞前 100 排序")
-				res = model.most_similar(q_list[0],topn = 100)
+				res = model.wv.most_similar(q_list[0],topn = 100)
 				for item in res:
 					print(item[0]+","+str(item[1]))
 
 			elif len(q_list) == 2:
 				print("計算 Cosine 相似度")
-				res = model.similarity(q_list[0],q_list[1])
+				res = model.wv.similarity(q_list[0],q_list[1])
 				print(res)
 			else:
 				print("%s之於%s，如%s之於" % (q_list[0],q_list[2],q_list[1]))
-				res = model.most_similar([q_list[0],q_list[1]], [q_list[2]], topn= 100)
+				res = model.wv.most_similar([q_list[0],q_list[1]], [q_list[2]], topn= 100)
 				for item in res:
 					print(item[0]+","+str(item[1]))
 			print("----------------------------")
